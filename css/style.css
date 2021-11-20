@@ -1,0 +1,20 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav, main {
+    padding: 0 5em;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: silver;
+    padding: 2em 0;
+    display: flex;
+    justify-content: center;
+}
