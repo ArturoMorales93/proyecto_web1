@@ -5,8 +5,8 @@
 <form action="{{ url_for('confirmacion') }}" method="post">
     <div class="mb-3">
         <label for="servicio" class="form-label">Servicio</label>
-        <select class="form-select" id="servicio" name="servicio">
-            <option selected>Seleccione un servicio</option>
+        <select class="form-select" id="servicio" name="servicio" required>
+            <option selected disabled value="">Seleccione un servicio</option>
             <option value="Servicio 1">Servicio 1</option>
             <option value="Servicio 2">Servicio 2</option>
             <option value="Servicio 3">Servicio 3</option>
