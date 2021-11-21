@@ -2,5 +2,34 @@
 {% block body %}
 
 <h1>Página de galería</h1>
+<div class="galeria">
+    <img class="galeria-img" src="{{ url_for('static', filename='img/banner-1.jpg') }}" data-bs-toggle="modal"
+        data-bs-target="#modal">
+    <img class="galeria-img" src="{{ url_for('static', filename='img/banner-2.jpg') }}" data-bs-toggle="modal"
+        data-bs-target="#modal">
+    <img class="galeria-img" src="{{ url_for('static', filename='img/banner-3.jpg') }}" data-bs-toggle="modal"
+        data-bs-target="#modal">
+    <img class="galeria-img" src="{{ url_for('static', filename='img/banner-1.jpg') }}" data-bs-toggle="modal"
+        data-bs-target="#modal">
+    <img class="galeria-img" src="{{ url_for('static', filename='img/banner-2.jpg') }}" data-bs-toggle="modal"
+        data-bs-target="#modal">
+    <img class="galeria-img" src="{{ url_for('static', filename='img/banner-3.jpg') }}" data-bs-toggle="modal"
+        data-bs-target="#modal">
+    <img class="galeria-img" src="{{ url_for('static', filename='img/banner-1.jpg') }}" data-bs-toggle="modal"
+        data-bs-target="#modal">
+    <img class="galeria-img" src="{{ url_for('static', filename='img/banner-2.jpg') }}" data-bs-toggle="modal"
+        data-bs-target="#modal">
+    <img class="galeria-img" src="{{ url_for('static', filename='img/banner-3.jpg') }}" data-bs-toggle="modal"
+        data-bs-target="#modal">
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div id="modalContent" class="modal-content">
+
+        </div>
+    </div>
+</div>
 
 {% endblock %}

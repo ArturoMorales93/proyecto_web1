@@ -1,0 +1,18 @@
+.galeria {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+}
+
+.galeria-img {
+    width: 350px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: .15s;
+}
+
+.galeria-img:hover {
+    transform: scale3d(1.05, 1.05, 1)
+}
