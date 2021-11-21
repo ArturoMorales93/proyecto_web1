@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -26,6 +26,22 @@ def bootstrap():
 def reservar():
     title = "Reservar"
     return render_template("reservar.html", title=title)
+
+@app.route("/confirmacion", methods=["POST"])
+def confirmacion():
+    title = "Confirmación"
+    data = {
+        "servicio": request.form.get("servicio"),
+        "nombre": request.form.get("nombre"),
+        "apellidos": request.form.get("apellidos"),
+        "correo": request.form.get("correo"),
+        "fecha": request.form.get("fecha"),
+        "hora": request.form.get("hora"),
+        "cantAdultos": request.form.get("cantAdultos"),
+        "cantNinios": request.form.get("cantNinios"),
+        "total": request.form.get("total")
+    }
+    return render_template("confirmacion.html", title=title, data=data)
 
 if __name__ == "__main__":
     app.run(debug=True)

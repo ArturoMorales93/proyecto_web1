@@ -2,46 +2,46 @@
 {% block body %}
 
 <h1>Página de reservas</h1>
-<form>
+<form action="{{ url_for('confirmacion') }}" method="post">
     <div class="mb-3">
         <label for="servicio" class="form-label">Servicio</label>
-        <select class="form-select" id="servicio">
+        <select class="form-select" id="servicio" name="servicio">
             <option selected>Seleccione un servicio</option>
-            <option value="1">Servicio 1</option>
-            <option value="2">Servicio 2</option>
-            <option value="3">Servicio 3</option>
-            <option value="4">Servicio 4</option>
+            <option value="Servicio 1">Servicio 1</option>
+            <option value="Servicio 2">Servicio 2</option>
+            <option value="Servicio 3">Servicio 3</option>
+            <option value="Servicio 4">Servicio 4</option>
         </select>
     </div>
     <div class="row">
         <div class="col">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre">
+                <input type="text" class="form-control" id="nombre" name="nombre">
             </div>
         </div>
         <div class="col">
             <div class="mb-3">
-                <label for="apellido" class="form-label">Apellidos</label>
-                <input type="text" class="form-control" id="apellido">
+                <label for="apellidos" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos" name="apellidos">
             </div>
         </div>
     </div>
     <div class="mb-3">
         <label for="correo" class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control" id="correo">
+        <input type="email" class="form-control" id="correo" name="correo">
     </div>
     <div class="row">
         <div class="col">
             <div class="mb-3">
                 <label for="fecha" class="form-label">Fecha</label>
-                <input type="date" class="form-control" id="fecha">
+                <input type="date" class="form-control" id="fecha" name="fecha">
             </div>
         </div>
         <div class="col">
             <div class="mb-3">
                 <label for="hora" class="form-label">Hora</label>
-                <input type="time" class="form-control" id="hora">
+                <input type="time" class="form-control" id="hora" name="hora">
             </div>
         </div>
     </div>
@@ -49,24 +49,24 @@
         <div class="col">
             <div class="mb-3">
                 <label for="cantAdultos" class="form-label">Adultos</label>
-                <input type="number" class="form-control" id="cantAdultos" min="1">
+                <input type="number" class="form-control" id="cantAdultos" name="cantAdultos" min="1">
             </div>
         </div>
         <div class="col">
             <div class="mb-3">
                 <label for="cantNinios" class="form-label">Niños</label>
-                <input type="number" class="form-control" id="cantNinios" min="0">
+                <input type="number" class="form-control" id="cantNinios" name="cantNinios" min="0">
             </div>
         </div>
     </div>
     <div class="col">
         <div class="mb-3">
             <label class="form-label total-label">Total a pagar:</label>
-            <label id="total" class="form-label total">100</label>
+            <label id="total" class="form-label total">0</label>
         </div>
     </div>
     <button type="submit" class="btn btn-primary">Confirmar reservación</button>
-    <button type="reset" class="btn btn-outline-primary">Limpiar campos</button>
+    <button type="reset" id="reset" class="btn btn-outline-primary">Limpiar campos</button>
 </form>
 
 {% endblock %}
