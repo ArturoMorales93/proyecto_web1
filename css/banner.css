@@ -1,0 +1,7 @@
+.carousel-item {
+    height: 60vh;
+}
+
+.carousel-item img {
+    filter: brightness(50%);
+}

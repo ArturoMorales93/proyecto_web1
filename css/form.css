@@ -1,0 +1,16 @@
+form {
+    width: 75%;
+}
+
+label[class*="total"] {
+    font-size: 1.75em;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.total::before {
+    content: "$";
+    padding-left: .25em;
+}

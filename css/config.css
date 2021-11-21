@@ -1,0 +1,24 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav, main>:not(div:first-child) {
+    padding: 0 5rem;
+}
+
+main {
+    flex-grow: 1;
+}
+
+main h1:first-of-type, main h2:first-of-type, main h3:first-of-type {
+    margin-top: 1rem;
+}
+
+footer {
+    background-color: silver;
+    padding: 1.5em 0;
+    margin-top: 1rem;
+    text-align: center;
+}
