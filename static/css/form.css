@@ -12,5 +12,5 @@ label[class*="total"] {
 
 .total::before {
     content: "$";
-    padding-left: .25em;
+    margin-left: .25em;
 }
