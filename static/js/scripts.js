@@ -53,7 +53,6 @@ const servicioInput = document.getElementById("servicio")
 const adultosInput = document.getElementById("cantAdultos")
 const niniosInput = document.getElementById("cantNinios")
 const totalLabel = document.getElementById("total")
-const resetBtn = document.getElementById("reset")
 // Precios de los servicios
 const precioServicios = {
     servicio1: 100,
@@ -65,7 +64,7 @@ const precioServicios = {
 const calcularTotal = () => {
     total = precio * adultosInput.value
     total += (precio / 2) * niniosInput.value
-    totalLabel.innerText = total
+    totalLabel.value = "$"+total
 }
 // Se settea el precio de acuerdo a la opción seleccionada del select
 const setPrecio = () => {
@@ -104,15 +103,6 @@ if (servicioInput != null && adultosInput != null && niniosInput != null && tota
 
     // Se settea el total cada que se cambia la cantidad de niños
     niniosInput.addEventListener("change", () => {
-        calcularTotal()
-    })
-}
-
-// Se limpia el total cuando se preciona el botón de reset
-if (resetBtn != null) {
-    resetBtn.addEventListener("click", () => {
-        total = 0
-        precio = 0
         calcularTotal()
     })
 }

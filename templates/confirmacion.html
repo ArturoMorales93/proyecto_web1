@@ -1,16 +1,21 @@
 {% extends "base.html" %}
 {% block body %}
 
-<h1>Página de confirmación</h1>
-<ul>
-    <li>{{ data.servicio }}</li>
-    <li>{{ data.nombre }}</li>
-    <li>{{ data.apellidos }}</li>
-    <li>{{ data.correo }}</li>
-    <li>{{ data.fecha }}</li>
-    <li>{{ data.hora }}</li>
-    <li>{{ data.cantAdultos }}</li>
-    <li>{{ data.cantNinios }}</li>
-</ul>
+<h2>Confirmación de reserva</h2>
+<div class="card-container">
+    <div class="card text-center">
+        <h5 class="card-header">{{ data.servicio }}</h5>
+        <div class="card-body">
+            <h5 class="card-title">{{ data.nombre }} {{ data.apellidos }}</h5>
+            <p class="card-text">{{ data.correo }}</p>
+            <p class="card-text"><pre>Adultos: {{ data.cantAdultos }}    Niños: {{ data.cantNinios }}</pre></p>
+            <h5 class="card-title">{{ data.total }}</h5>
+            <a href="/servicios" class="btn btn-primary">Ver más servicios</a>
+        </div>
+        <div class="card-footer text-muted">
+            {{ data.hora }} - {{ data.fecha }}
+        </div>
+    </div>
+</div>
 
 {% endblock %}
