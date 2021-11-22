@@ -32,7 +32,7 @@ if (navLinks.length != 0) {
     se agrega como hijo al contenedor del modal.
 */
 const galeryImgs = document.getElementsByClassName("galeria-img")
-const modalContent = document.getElementById("modalContent123")
+const modalContent = document.getElementById("modalContent")
 const modalImg = document.createElement("img")
 if (galeryImgs.length != 0 && modalContent != null) {
     for (const img of galeryImgs) {
