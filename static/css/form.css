@@ -9,6 +9,7 @@ label[class*="total"], input[class*="total"] {
 .total {
     font-weight: bold;
     border: none;
+    pointer-events: none;
 }
 
 /* Confirmacion */
