@@ -1,5 +1,4 @@
-{% extends "base.html" %}
-{% block body %}
+{% extends "base.html" %} {% block body %}
 
 <h1>Página de reservas</h1>
 <form action="{{ url_for('confirmacion') }}" method="post">
@@ -62,7 +61,7 @@
     <div class="col">
         <div class="mb-3">
             <label class="form-label total-label">Total a pagar:</label>
-            <input class="form-label total" id="total" name="total" value="$0">
+            <input class="form-label total" id="total" name="total" value="$0" readonly>
         </div>
     </div>
     <button type="submit" class="btn btn-primary">Confirmar reservación</button>

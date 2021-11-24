@@ -2,7 +2,8 @@ form {
     width: 75%;
 }
 
-label[class*="total"], input[class*="total"] {
+label[class*="total"],
+input[class*="total"] {
     font-size: 1.75em;
 }
 
@@ -12,7 +13,9 @@ label[class*="total"], input[class*="total"] {
     pointer-events: none;
 }
 
+
 /* Confirmacion */
+
 .card-container {
     width: 50%;
     margin: 2rem auto;
