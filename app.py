@@ -8,9 +8,14 @@ def index():
     return render_template("index.html", title=title)
 
 @app.route("/servicios")
-def servicio():
+def servicios():
     title = "Servicios"
     return render_template("servicios.html", title=title)
+
+@app.route("/servicio/<int:num>")
+def servicio(num):
+    title = "Servicio"
+    return render_template("servicio.html", title=title, num=num)
 
 @app.route("/galeria")
 def galeria():
