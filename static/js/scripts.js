@@ -56,9 +56,9 @@ const totalLabel = document.getElementById("total")
 // Precios de los servicios
 const precioServicios = {
     servicio1: 100,
-    servicio2: 150,
-    servicio3: 200,
-    servicio4: 225
+    servicio2: 80,
+    servicio3: 150,
+    servicio4: 30
 }
 // Se calcula el monto total multiplicando el precio con las cantidades de los inputs
 const calcularTotal = () => {
