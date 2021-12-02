@@ -1,23 +1,87 @@
-body {
-    --header-bg: #5A7A36;
-    --body-bg: #DCFBBA;
-    --footer-bg: #93C758;
+@import url('http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
+body {
+    --header-bg: hsla(87, 21%, 92%);
+    --body-bg: hsl(0, 0%, 98%);
+    --footer-bg: hsl(77, 93%, 11%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: var(--body-bg);
 }
 
-nav, main>:not(div:first-child) {
+nav,
+main>:not(div:first-child) {
     padding: 0 5rem;
+}
+
+.nav-link {
+    color: #000 !important;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: rgb(107, 99, 22) !important;
+}
+
+.heading-tag {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.middle-container {
+    padding-top: 50px;
+    text-align: center;
+    background: hsl(70, 14%, 91%);
+}
+
+.heading2 {
+    font-weight: normal;
+    font-size: 2.5rem;
+}
+
+.lorem-imgs1 {
+    width: 25%;
+    float: right;
+    margin-left: 30px;
+}
+
+.lorem-imgs2 {
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
+
+.lorem-imgs3 {
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
+
+.skill-row {
+    width: 50%;
+    margin: 100px auto;
+    text-align: left;
+}
+
+.into {
+    width: 30%;
+    margin: auto;
 }
 
 main {
     flex-grow: 1;
 }
 
-main h1:first-of-type, main h2:first-of-type, main h3:first-of-type {
+main h1:first-of-type,
+main h2:first-of-type,
+main h3:first-of-type {
     margin-top: 1rem;
 }
 
@@ -30,4 +94,5 @@ footer {
     padding: 1.5em 0;
     margin-top: 1rem;
     text-align: center;
+    color: #fff;
 }
