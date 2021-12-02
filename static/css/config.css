@@ -1,7 +1,12 @@
 body {
+    --header-bg: #5A7A36;
+    --body-bg: #DCFBBA;
+    --footer-bg: #93C758;
+
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: var(--body-bg);
 }
 
 nav, main>:not(div:first-child) {
@@ -16,8 +21,12 @@ main h1:first-of-type, main h2:first-of-type, main h3:first-of-type {
     margin-top: 1rem;
 }
 
+.navbar {
+    background-color: var(--header-bg) !important;
+}
+
 footer {
-    background-color: silver;
+    background-color: var(--footer-bg);
     padding: 1.5em 0;
     margin-top: 1rem;
     text-align: center;

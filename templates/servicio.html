@@ -1,6 +1,7 @@
 {% extends "base.html" %} {% block body %}
 
-{% macro servicio(servicio, horario, precio) %}
+{% macro servicio(servicio, horario, precio, img) %}
+<div class="servicio-text">
     <h1>{{ servicio }}</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium sequi accusamus tempora quod numquam
         nulla voluptas odio cumque labore. Quos illum ipsam beatae perferendis fugiat sunt maiores provident
@@ -10,24 +11,24 @@
     <h3>Precio</h3>
     <p>Adultos ${{ precio }}</p>
     <p class="small">Niños hasta los 12 años pagan la mitad en todos los servicios.</p>
+</div>
+<div class="servicio-img">
+    <img src="{{ img }}" alt="">
+</div>
 {% endmacro %}
 
 <div class="servicio-grid">
-    <div class="servicio-text">
-        {% if num == 1 %}
-        {{ servicio("Pase de día", "10:00 am - 6:00 pm", "100") }}
-        {% elif num == 2 %}
-        {{ servicio("Pase de noche", "6:00 pm - 11:00 pm", "80") }}
-        {% elif num == 3 %}
-        {{ servicio("Pase de día completo", "10:00 am - 11:00 pm", "150") }}
-        {% elif num == 4 %}
-        {{ servicio("Solo piscinas", "10:00 am - 6:00 pm", "30") }}
-        {% endif %}
-    </div>
-    <div class="servicio-img">
-        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.sentosa.com.sg%2F-%2Fmedia%2Fsentosa%2Ffeatures%2Fgallery%2Fplaces-to-stay%2Fvillage-hotel%2Fvhsgallery2.jpg%3Frevision%3D7818d99a-f009-4b2c-a53c-4c497fe22742&f=1&nofb=1"
-            alt="">
-    </div>
+
+    {% if num == 1 %}
+    {{ servicio("Pase de día", "10:00 am - 6:00 pm", "100", "/static/img/service-1.jpg") }}
+    {% elif num == 2 %}
+    {{ servicio("Pase de noche", "6:00 pm - 11:00 pm", "80", "/static/img/service-2.jpg") }}
+    {% elif num == 3 %}
+    {{ servicio("Pase de día completo", "10:00 am - 11:00 pm", "150", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.sentosa.com.sg%2F-%2Fmedia%2Fsentosa%2Ffeatures%2Fgallery%2Fplaces-to-stay%2Fvillage-hotel%2Fvhsgallery2.jpg%3Frevision%3D7818d99a-f009-4b2c-a53c-4c497fe22742&f=1&nofb=1") }}
+    {% elif num == 4 %}
+    {{ servicio("Solo piscinas", "10:00 am - 6:00 pm", "30", "/static/img/service-4.jpg") }}
+    {% endif %}
+
 </div>
 
 {% endblock %}

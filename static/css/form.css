@@ -11,6 +11,7 @@ input[class*="total"] {
     font-weight: bold;
     border: none;
     pointer-events: none;
+    background-color: transparent;
 }
 
 
