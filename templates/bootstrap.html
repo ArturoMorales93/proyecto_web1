@@ -1,8 +1,9 @@
 {% extends "base.html" %} {% block body %}
 
-<h1>Página de bootstrap</h1>
-<h3>Definición</h3>
+<h1>Bootstrap</h1>
 <br>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus officia dicta distinctio aperiam minima laudantium facere ducimus voluptatem illo, exercitationem praesentium rem eligendi, nihil consequatur facilis! Ex nulla consectetur non!</p>
+<div class="doc-container">
+    <iframe class="document" src="{{ url_for('static', filename='pdf/doc.pdf') }}" frameborder="0"></iframe>
+</div>
 
 {% endblock %}

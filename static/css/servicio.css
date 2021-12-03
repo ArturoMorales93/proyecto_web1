@@ -1,7 +1,8 @@
 .servicio-grid {
     display: flex;
     align-items: center;
-    padding: 5rem;
+    padding: 2rem;
+    flex-wrap: wrap-reverse;
 }
 
 .servicio-img {
@@ -16,4 +17,11 @@
 .servicio-img img {
     width: 100%;
     border-radius: 15px;
+}
+
+@media (min-width: 576px) {
+    .servicio-grid {
+        padding: 5rem;
+        flex-wrap: nowrap;
+    }
 }

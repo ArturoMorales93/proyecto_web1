@@ -1,5 +1,5 @@
 .carousel-item {
-    height: 60vh;
+    height: auto;
 }
 
 .carousel-item img {
@@ -7,9 +7,15 @@
 }
 
 .logo {
-    width: 8%;
+    width: 4rem;
 }
 
 .logo2 {
     width: 12%;
+}
+
+@media (min-width: 576px) {
+    .carousel-item {
+        height: 400px;
+    }
 }
