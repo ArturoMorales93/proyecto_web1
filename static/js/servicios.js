@@ -8,7 +8,25 @@ const slidesLenght = rightSlide.querySelectorAll('div').length;
 let activeSlideIndex = 0;
 
 if (window.matchMedia("(max-width: 575.98px)").matches) {
-    
+    leftSlide.style.left = `-${(slidesLenght - 1) * 100}%`;
+
+    const changeSlide = (direction) => {
+        const sliderHeight = content.clientWidth;
+        if (direction === 'left') {
+            console.log("left")
+            activeSlideIndex++;
+            if (activeSlideIndex > slidesLenght - 1) activeSlideIndex = 0;
+        } else if (direction === 'right') {
+            console.log("right")
+            activeSlideIndex--;
+            if (activeSlideIndex < 0) activeSlideIndex = slidesLenght - 1;
+        }
+        rightSlide.style.transform = `translateX(-${activeSlideIndex * sliderHeight}px)`;
+        leftSlide.style.transform = `translateX(${activeSlideIndex * sliderHeight}px)`;
+    };
+
+    upButton.addEventListener('click', () => changeSlide('right'));
+    downButton.addEventListener('click', () => changeSlide('left'));
 } else {
     leftSlide.style.top = `-${(slidesLenght - 1) * 100}vh`;
 
