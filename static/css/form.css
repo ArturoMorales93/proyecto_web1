@@ -13,6 +13,7 @@ input[class*="total"] {
     border: none;
     pointer-events: none;
     background-color: transparent;
+    width: 50%;
 }
 
 .form-btns {
