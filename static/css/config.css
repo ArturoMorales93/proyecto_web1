@@ -1,14 +1,14 @@
-@import url('http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url("http://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
     --header-bg: hsla(87, 21%, 92%);
-    --body-bg: hsl(0, 0%, 98%);
+    --body-bg: hsl(70, 14%, 91%);
     --footer-bg: hsl(77, 93%, 11%);
     min-height: 100vh;
     display: flex;
@@ -17,8 +17,8 @@ body {
 }
 
 nav,
-main>:not(div:first-child) {
-    padding: 0 5rem;
+main > :not(div:first-child) {
+    padding: 0 .5rem;
 }
 
 .nav-link {
@@ -30,15 +30,17 @@ main>:not(div:first-child) {
     color: rgb(107, 99, 22) !important;
 }
 
+.active {
+    color: rgb(107, 99, 22) !important;
+}
+
 .heading-tag {
     font-weight: 700;
     font-size: 2rem;
 }
 
 .middle-container {
-    padding-top: 50px;
     text-align: center;
-    background: hsl(70, 14%, 91%);
 }
 
 .heading2 {
@@ -46,37 +48,20 @@ main>:not(div:first-child) {
     font-size: 2.5rem;
 }
 
-.lorem-imgs1 {
-    width: 25%;
-    float: right;
-    margin-left: 30px;
-}
-
-.lorem-imgs2 {
-    width: 25%;
-    float: left;
-    margin-right: 30px;
-}
-
-.lorem-imgs3 {
-    width: 25%;
-    float: left;
-    margin-right: 30px;
+.lorem-imgs1, .lorem-imgs2, .lorem-imgs3 {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
 }
 
 .skill-row {
-    width: 50%;
-    margin: 100px auto;
+    padding: 1rem;
     text-align: left;
-}
-
-.into {
-    width: 30%;
-    margin: auto;
 }
 
 main {
     flex-grow: 1;
+    padding-bottom: 1rem;
 }
 
 main h1:first-of-type,
@@ -92,7 +77,61 @@ main h3:first-of-type {
 footer {
     background-color: var(--footer-bg);
     padding: 1.5em 0;
-    margin-top: 1rem;
     text-align: center;
     color: #fff;
+}
+
+.doc-container {
+    display: flex;
+    justify-content: center;
+}
+
+.document {
+    width: 90%;
+    height: 450px;
+}
+
+@media (min-width: 576px) {
+    nav,
+    main > :not(div:first-child) {
+        padding: 0 5rem;
+    }
+
+    .middle-container {
+        padding-top: 50px;
+    }
+
+    .into {
+        width: 30%;
+        margin: auto;
+    }
+
+    .skill-row {
+        width: 50%;
+        margin: 100px auto;
+        text-align: left;
+    }
+
+    .lorem-imgs1 {
+        width: 25%;
+        float: right;
+        margin-left: 30px;
+    }
+
+    .lorem-imgs2 {
+        width: 25%;
+        float: left;
+        margin-right: 30px;
+    }
+
+    .lorem-imgs3 {
+        width: 25%;
+        float: left;
+        margin-right: 30px;
+    }
+
+    .document {
+        width: 70%;
+        height: 600px;
+    }
 }

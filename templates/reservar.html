@@ -13,7 +13,7 @@
         </select>
     </div>
     <div class="row">
-        <div class="col">
+        <div class="col-md-6">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="nombre" name="nombre">
@@ -31,7 +31,7 @@
         <input type="email" class="form-control" id="correo" name="correo">
     </div>
     <div class="row">
-        <div class="col">
+        <div class="col-md-6">
             <div class="mb-3">
                 <label for="fecha" class="form-label">Fecha</label>
                 <input type="date" class="form-control" id="fecha" name="fecha">
@@ -64,8 +64,10 @@
             <input class="form-label total" id="total" name="total" value="$0" readonly>
         </div>
     </div>
-    <button type="submit" class="btn btn-success">Confirmar reservación</button>
-    <button type="reset" class="btn btn-outline-success">Limpiar campos</button>
+    <div class="form-btns">
+        <button type="submit" class="btn btn-dark">Confirmar reservación</button>
+        <button type="reset" class="btn btn-outline-dark">Limpiar campos</button>
+    </div>
 </form>
 
 {% endblock %}

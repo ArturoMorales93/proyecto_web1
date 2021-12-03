@@ -1,5 +1,6 @@
 form {
-    width: 75%;
+    width: 90%;
+    margin: 0 auto;
 }
 
 label[class*="total"],
@@ -14,10 +15,33 @@ input[class*="total"] {
     background-color: transparent;
 }
 
+.form-btns {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-btns button {
+    flex-grow: 1;
+}
 
 /* Confirmacion */
-
 .card-container {
-    width: 50%;
+    width: 95%;
     margin: 2rem auto;
+}
+
+@media (min-width: 576px) {
+    form {
+        width: 75%;
+        margin: 0;
+    }
+
+    .form-btns {
+        display: block;
+    }
+
+    .card-container {
+        width: 50%;
+        margin: 2rem auto;
+    }
 }
