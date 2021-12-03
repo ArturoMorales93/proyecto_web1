@@ -17,6 +17,14 @@
 .servicio-img img {
     width: 100%;
     border-radius: 15px;
+    animation-name: entradaImg;
+    animation-duration: .75s;
+}
+
+@keyframes entradaImg {
+    from {
+        transform: translateX(100vw);
+    }
 }
 
 @media (min-width: 576px) {

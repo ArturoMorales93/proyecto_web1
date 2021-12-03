@@ -7,20 +7,26 @@ const slidesLenght = rightSlide.querySelectorAll('div').length;
 
 let activeSlideIndex = 0;
 
-leftSlide.style.top = `-${(slidesLenght - 1) * 100}vh`;
+if (window.matchMedia("(max-width: 575.98px)").matches) {
+    
+} else {
+    leftSlide.style.top = `-${(slidesLenght - 1) * 100}vh`;
 
-const changeSlide = (direction) => {
-    const sliderHeight = content.clientHeight;
-    if (direction === 'up') {
-        activeSlideIndex++;
-        if (activeSlideIndex > slidesLenght - 1) activeSlideIndex = 0;
-    } else if (direction === 'down') {
-        activeSlideIndex--;
-        if (activeSlideIndex < 0) activeSlideIndex = slidesLenght - 1;
-    }
-    rightSlide.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`;
-    leftSlide.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`;
-};
+    const changeSlide = (direction) => {
+        const sliderHeight = content.clientHeight;
+        if (direction === 'up') {
+            activeSlideIndex++;
+            if (activeSlideIndex > slidesLenght - 1) activeSlideIndex = 0;
+        } else if (direction === 'down') {
+            activeSlideIndex--;
+            if (activeSlideIndex < 0) activeSlideIndex = slidesLenght - 1;
+        }
+        rightSlide.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`;
+        leftSlide.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`;
+    };
 
-upButton.addEventListener('click', () => changeSlide('up'));
-downButton.addEventListener('click', () => changeSlide('down'));
+    upButton.addEventListener('click', () => changeSlide('up'));
+    downButton.addEventListener('click', () => changeSlide('down'));
+}
+
+// down es left
