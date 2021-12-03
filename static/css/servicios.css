@@ -151,11 +151,11 @@
 
 @media (max-width: 575.98px) {
     .container {
-        min-height: 60vh;
+        min-height: 70vh;
     }
 
     .container .content {
-        height: 60vh;
+        height: 70vh;
     }
 
     .left-slide {
@@ -194,8 +194,12 @@
     
     .container .content .action-buttons button {
         top: 40%;
-        left: 106%;
+        left: 112%;
         transform: translateY(-50%);
+    }
+
+    .container .content .action-buttons .but:hover {
+        background-color: transparent;
     }
 
     .container .content .action-buttons .down-button {
