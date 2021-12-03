@@ -82,13 +82,7 @@ footer {
 }
 
 .doc-container {
-    display: flex;
-    justify-content: center;
-}
-
-.document {
-    width: 90%;
-    height: 450px;
+    display: none;
 }
 
 @media (min-width: 576px) {
@@ -128,6 +122,15 @@ footer {
         width: 25%;
         float: left;
         margin-right: 30px;
+    }
+
+    .link-container {
+        display: none;
+    }
+
+    .doc-container {
+        display: flex;
+        justify-content: center;
     }
 
     .document {
