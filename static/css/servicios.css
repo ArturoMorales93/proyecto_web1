@@ -163,6 +163,11 @@
         height: 40%;
         top: 0;
         left: 0;
+        display: flex;
+    }
+
+    .left-slide>div {
+        flex-shrink: 0;
     }
 
     .left-slide h1 {
@@ -176,6 +181,11 @@
         height: 60%;
         top: 40%;
         left: 0;
+        display: flex;
+    }
+
+    .right-slide>div {
+        flex-shrink: 0;
     }
 
     .action-buttons {
